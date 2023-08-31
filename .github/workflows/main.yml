@@ -27,8 +27,8 @@ jobs:
         SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
       run: |
         npm install supabase-cli
-        ./node_modules/.bin/supabase-cli login --url $SUPABASE_URL --key $SUPABASE_KEY
-        ./node_modules/.bin/supabase-cli deploy
+        ./node_modules/.bin/supabase login --url $SUPABASE_URL --key $SUPABASE_KEY
+        ./node_modules/.bin/supabase project deploy
 
         # Configure Supabase CLI with your credentials
         supabase login --url $SUPABASE_URL --key $SUPABASE_KEY
