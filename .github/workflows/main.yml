@@ -32,4 +32,4 @@ jobs:
         supabase login --url $SUPABASE_URL --key $SUPABASE_KEY
 
         # Deploy your project to Supabase
-        supabase deploy
+        supabase deploy 
