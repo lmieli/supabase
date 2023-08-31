@@ -26,9 +26,9 @@ jobs:
         SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
         SUPABASE_KEY: ${{ secrets.SUPABASE_KEY }}
       run: |
-        /opt/hostedtoolcache/node/14.21.3/x64/bin/supabase-cli login --url $SUPABASE_URL --key $SUPABASE_KEY
-        /opt/hostedtoolcache/node/14.21.3/x64/bin/supabase-cli deploy
-        npm install -g supabase-cli
+        npm install supabase-cli
+        ./node_modules/.bin/supabase-cli login --url $SUPABASE_URL --key $SUPABASE_KEY
+        ./node_modules/.bin/supabase-cli deploy
 
         # Configure Supabase CLI with your credentials
         supabase login --url $SUPABASE_URL --key $SUPABASE_KEY
